@@ -4,6 +4,7 @@ jobs:
   linux-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
       uses: actions/checkout@v2
       - run: "npm install"
       - run: "echo 'linux'"
@@ -12,6 +13,7 @@ jobs:
   mac-test:
     runs-on: macos-latest
     steps:
+      - name: Check out repository code
       uses: actions/checkout@v2
       - run: "npm install"
       - run: "echo 'mac'"
@@ -21,6 +23,7 @@ jobs:
   windows-test:
     runs-on: windows-latest
     steps:
+      - name: Check out repository code
       uses: actions/checkout@v2
       - run: "npm install"
       - run: "echo 'windows'"
