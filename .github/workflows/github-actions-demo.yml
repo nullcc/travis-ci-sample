@@ -12,7 +12,7 @@ jobs:
       - run: "npm install"
       - run: "echo 'linux'"
       - run: "java -version"
-      - run: "npx jest --testNamePattern "os:.*linux"
+      - run: "npx jest --testNamePattern os:.*linux"
   mac-test:
     runs-on: macos-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
       - run: "echo 'mac'"
       - run: "java -version"
       - run: "xcodebuild -version"
-      - run: "npx jest --testNamePattern "os:.*mac"
+      - run: "npx jest --testNamePattern os:.*mac"
   windows-test:
     runs-on: windows-latest
     steps:
@@ -37,4 +37,4 @@ jobs:
       - run: "npm install"
       - run: "echo 'windows'"
       - run: "java -version"
-      - run: "npx jest --testNamePattern "os:.*win"
+      - run: "npx jest --testNamePattern os:.*win"
