@@ -1,0 +1,28 @@
+git:
+  depth: 1
+
+os:
+  - linux
+  - osx
+  - windows
+
+language: node_js
+
+node_js:
+  - 14
+
+jdk:
+  - openjdk11
+
+install:
+  - npm install
+
+jobs:
+  include:
+    - os: linux
+      script: echo "linux"
+    - os: osx
+      osx_image: xcode13.0
+      script: echo "mac"
+    - os: windows
+      script: echo "windows"
