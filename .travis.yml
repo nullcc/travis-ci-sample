@@ -2,8 +2,8 @@ git:
   depth: 1
 
 os:
-  - linux
-  - osx
+#  - linux
+#  - osx
   - windows
 
 language: node_js
@@ -22,20 +22,22 @@ script:
 
 jobs:
   include:
-    - os: linux
-      script:
-        - echo "linux"
-        - java -version
-        - jest --testNamePattern linux
-    - os: osx
-      osx_image: xcode12.5
-      script:
-        - echo "mac"
-        - java -version
-        - xcodebuild -version
-        - jest --testNamePattern mac
+#    - os: linux
+#      script:
+#        - echo "linux"
+#        - java -version
+#        - jest --testNamePattern linux
+#    - os: osx
+#      osx_image: xcode12.5
+#      script:
+#        - echo "mac"
+#        - java -version
+#        - xcodebuild -version
+#        - jest --testNamePattern mac
     - os: windows
       script:
         - echo "windows"
+        - choco install jdk8
+        - export PATH=$PATH:"/c/Program Files/Java/jdk1.8.0_191/bin"
         - java -version
         - jest --testNamePattern win
