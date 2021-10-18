@@ -22,13 +22,17 @@ jobs:
     - os: linux
       script:
         - echo "linux"
+        - java -version
         - jest --testNamePattern linux
     - os: osx
       osx_image: xcode13.0
       script:
         - echo "mac"
+        - java -version
+        - xcodebuild -version
         - jest --testNamePattern mac
     - os: windows
       script:
         - echo "windows"
+        - java -version
         - jest --testNamePattern win
