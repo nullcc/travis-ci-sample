@@ -20,9 +20,15 @@ install:
 jobs:
   include:
     - os: linux
-      script: echo "linux"
+      script:
+        - echo "linux"
+        - jest --testNamePattern linux
     - os: osx
       osx_image: xcode13.0
-      script: echo "mac"
+      script:
+        - echo "mac"
+        - jest --testNamePattern mac
     - os: windows
-      script: echo "windows"
+      script:
+        - echo "windows"
+        - jest --testNamePattern win
