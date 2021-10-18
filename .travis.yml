@@ -6,16 +6,19 @@ os:
   - osx
   - windows
 
-language: java
-
-jdk:
-  - openjdk11
+language: node_js
 
 node_js:
   - 14
 
+jdk:
+  - openjdk11
+
 install:
   - npm install
+
+script:
+  - echo "Test"
 
 jobs:
   include:
