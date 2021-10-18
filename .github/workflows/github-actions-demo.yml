@@ -4,12 +4,14 @@ jobs:
   linux-test:
     runs-on: ubuntu-latest
     steps:
+      - run: "npm install"
       - run: "echo 'linux'"
       - run: "java -version"
       - run: "jest --testNamePattern linux"
   mac-test:
     runs-on: macos-latest
     steps:
+      - run: "npm install"
       - run: "echo 'mac'"
       - run: "java -version"
       - run: "xcodebuild -version"
@@ -17,6 +19,7 @@ jobs:
   windows-test:
     runs-on: windows-latest
     steps:
+      - run: "npm install"
       - run: "echo 'windows'"
       - run: "java -version"
       - run: "jest --testNamePattern win"
