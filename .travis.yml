@@ -6,22 +6,16 @@ os:
   - osx
   - windows
 
-language: node_js
-
-node_js:
-  - 14
+language: java
 
 jdk:
   - openjdk11
 
+node_js:
+  - 14
+
 install:
   - npm install
-
-script:
-  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
-  - export JAVA_HOME=$HOME/openjdk11
-  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 11 --target $JAVA_HOME
 
 jobs:
   include:
@@ -31,7 +25,7 @@ jobs:
         - java -version
         - jest --testNamePattern linux
     - os: osx
-      osx_image: xcode13.0
+      osx_image: xcode12.5
       script:
         - echo "mac"
         - java -version
